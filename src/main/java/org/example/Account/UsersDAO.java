@@ -14,12 +14,13 @@ public class UsersDAO {
         this.session = session;
 
     }
-    public User getUser(String login) throws HibernateException {
+
+    public User getUser(String login) {
         try {
             return session.createQuery("FROM User WHERE login = :login", User.class)
                     .setParameter("login", login)
                     .uniqueResult();
-        } catch (Exception e) {
+        } catch (HibernateException e) {
             throw new HibernateException("Ошибка при получении пользователя с логином: " + login, e);
         }
     }

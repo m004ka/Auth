@@ -4,17 +4,10 @@ import org.eclipse.jetty.ee10.servlet.ServletContextHandler;
 import org.eclipse.jetty.ee10.servlet.ServletHolder;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
-import org.eclipse.jetty.server.handler.ResourceHandler;
-import org.eclipse.jetty.util.resource.ResourceFactory;
 import org.example.Database.DBservice;
-
-
 import org.example.Servlets.SignInServlet;
 import org.example.Servlets.SignUpServlet;
-import org.eclipse.jetty.util.resource.Resource;
 
-
-import java.nio.file.Path;
 
 public class Main {
 
