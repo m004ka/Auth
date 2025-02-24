@@ -35,7 +35,7 @@ public class SignInServlet extends HttpServlet {
                 resp.getWriter().println("Unauthorized");
                 resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             }
-        }else {
+        } else {
             resp.getWriter().println("Not registered");
             resp.setStatus(HttpServletResponse.SC_TEMPORARY_REDIRECT);
         }

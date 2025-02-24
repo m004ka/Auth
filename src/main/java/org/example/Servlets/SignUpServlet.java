@@ -33,7 +33,7 @@ public class SignUpServlet extends HttpServlet {
                     .login(login)
                     .password(pass)
                     .build();
-            if(dBservice.addNewUser(user) == 0){
+            if (dBservice.addNewUser(user) == 0) {
                 resp.getWriter().println("Error Registered: " + login);
                 resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
