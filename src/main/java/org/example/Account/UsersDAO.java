@@ -14,8 +14,7 @@ public class UsersDAO {
         this.session = session;
 
     }
-
-    public User get(String login) throws HibernateException {
+    public User getUser(String login) throws HibernateException {
         try {
             return session.createQuery("FROM User WHERE login = :login", User.class)
                     .setParameter("login", login)

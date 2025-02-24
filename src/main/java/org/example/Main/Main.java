@@ -20,7 +20,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         DBservice dBservice = new DBservice();
-        System.setProperty("org.eclipse.jetty.LEVEL", "WARN");
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(new SignUpServlet(dBservice)), "/api/signup");

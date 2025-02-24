@@ -25,7 +25,7 @@ public class DBservice {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             UsersDAO dao = new UsersDAO(session);
-            User user = dao.get(login);
+            User user = dao.getUser(login);
             transaction.commit();
             return user == null;
         } catch (HibernateException e) {
@@ -37,7 +37,7 @@ public class DBservice {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             UsersDAO dao = new UsersDAO(session);
-            User user = dao.get(login);
+            User user = dao.getUser(login);
             transaction.commit();
             return user.getPassword().equals(password);
         } catch (HibernateException e) {
